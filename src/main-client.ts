@@ -850,7 +850,7 @@ export class MainClient extends BaseRestClient {
     T extends OrderType,
     RT extends OrderResponseType | undefined = undefined,
   >(params: NewSpotOrderParams<T, RT>): Promise<OrderResponseTypeFor<RT, T>> {
-    this.validateOrderId(params, 'newClientOrderId');
+    // this.validateOrderId(params, 'newClientOrderId');
     return this.postPrivate('api/v3/order', params);
   }
 
@@ -4198,16 +4198,7 @@ export class MainClient extends BaseRestClient {
       | NewOrderListParams<any>,
     orderIdProperty: OrderIdProperty,
   ): void {
-    const apiCategory = 'spot';
-    if (!params[orderIdProperty]) {
-      params[orderIdProperty] = generateNewOrderId(apiCategory);
-      return;
-    }
-
-    const expectedOrderIdPrefix = `x-${getOrderIdPrefix(apiCategory)}`;
-    if (!params[orderIdProperty].startsWith(expectedOrderIdPrefix)) {
-      logInvalidOrderId(orderIdProperty, expectedOrderIdPrefix, params);
-    }
+    return;
   }
 
   /**

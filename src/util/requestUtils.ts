@@ -68,14 +68,14 @@ export function getOrderIdPrefix(network: BinanceBaseUrlKey): string {
     case 'spot2':
     case 'spot3':
     case 'spot4':
-      return 'U5D79M5B';
+      return '';
 
     case 'usdm':
     case 'usdmtest':
     case 'coinm':
     case 'coinmtest':
     case 'papi':
-      return '15PC4ZJy';
+      return '';
 
     case 'voptions':
     case 'voptionstest':
@@ -83,15 +83,12 @@ export function getOrderIdPrefix(network: BinanceBaseUrlKey): string {
 
     default:
       // throwUnhandledSwitch(network, `"${network}" unhandled`);
-      return 'U5D79M5B';
+      return '';
   }
 }
 
 export function generateNewOrderId(network: BinanceBaseUrlKey): string {
-  const id = nanoid(22);
-  const prefixedId = 'x-' + getOrderIdPrefix(network) + id;
-
-  return prefixedId;
+  return '';
 }
 
 export function serialiseParams(

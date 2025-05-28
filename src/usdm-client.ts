@@ -828,15 +828,6 @@ export class USDMClient extends BaseRestClient {
       | CancelOCOParams,
     orderIdProperty: OrderIdProperty,
   ): void {
-    const apiCategory = this.clientId;
-    if (!params[orderIdProperty]) {
-      params[orderIdProperty] = generateNewOrderId(apiCategory);
-      return;
-    }
-
-    const expectedOrderIdPrefix = `x-${getOrderIdPrefix(apiCategory)}`;
-    if (!params[orderIdProperty].startsWith(expectedOrderIdPrefix)) {
-      logInvalidOrderId(orderIdProperty, expectedOrderIdPrefix, params);
-    }
+    return
   }
 }
