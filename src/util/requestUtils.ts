@@ -166,26 +166,26 @@ export async function getRequestSignature(
 
 const BINANCE_BASE_URLS: Record<BinanceBaseUrlKey, string> = {
   // spot/margin/savings/mining
-  spot: 'https://api.binance.com',
-  spot1: 'https://api.binance.com',
-  spot2: 'https://api1.binance.com',
-  spot3: 'https://api2.binance.com',
-  spot4: 'https://api3.binance.com',
+  spot: 'https://api.asterdex.com',
+  spot1: 'https://api.asterdex.com',
+  spot2: 'https://api1.asterdex.com',
+  spot3: 'https://api2.asterdex.com',
+  spot4: 'https://api3.asterdex.com',
 
   // USDM Futures
-  usdm: 'https://fapi.binance.com',
+  usdm: 'https://fapi.asterdex.com',
   usdmtest: 'https://testnet.binancefuture.com',
 
   // COINM Futures
-  coinm: 'https://dapi.binance.com',
+  coinm: 'https://dapi.asterdex.com',
   coinmtest: 'https://testnet.binancefuture.com',
 
   // Vanilla Options
-  voptions: 'https://vapi.binance.com',
+  voptions: 'https://vapi.asterdex.com',
   voptionstest: 'https://testnet.binanceops.com',
 
   // Portfolio Margin
-  papi: 'https://papi.binance.com',
+  papi: 'https://papi.asterdex.com',
 };
 
 export function getServerTimeEndpoint(urlKey: BinanceBaseUrlKey): string {
