@@ -1,5 +1,5 @@
 {
-  "name": "binance",
+  "name": "aster",
   "version": "2.15.20",
   "description": "Node.js & JavaScript SDK for Binance REST APIs & WebSockets, with TypeScript & end-to-end tests.",
   "main": "lib/index.js",
