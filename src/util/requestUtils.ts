@@ -166,11 +166,11 @@ export async function getRequestSignature(
 
 const BINANCE_BASE_URLS: Record<BinanceBaseUrlKey, string> = {
   // spot/margin/savings/mining
-  spot: 'https://api.asterdex.com',
-  spot1: 'https://api.asterdex.com',
-  spot2: 'https://api1.asterdex.com',
-  spot3: 'https://api2.asterdex.com',
-  spot4: 'https://api3.asterdex.com',
+  spot: 'https://sapi.asterdex.com',
+  spot1: 'https://sapi.asterdex.com',
+  spot2: 'https://sapi1.asterdex.com',
+  spot3: 'https://sapi2.asterdex.com',
+  spot4: 'https://sapi3.asterdex.com',
 
   // USDM Futures
   usdm: 'https://fapi.asterdex.com',
